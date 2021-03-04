@@ -1,0 +1,7 @@
+{
+  "name": "Zhi MrBond Airer",
+  "domains": ["zhimrbond", "cover", "light"],
+  "country": ["CN"],
+  "render_readme": true,
+  "iot_class": "Local Polling"
+}

@@ -1,0 +1,8 @@
+{
+	"domain": "zhimrbond",
+	"name": "Zhi MrBond Airer",
+	"documentation": "https://github.com/Yonsm/ZhiMrBond",
+	"requirements": ["python-miio>=0.5.3"],
+	"dependencies": [],
+	"codeowners": ["@Yonsm"]
+}
