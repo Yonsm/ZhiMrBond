@@ -1,4 +1,4 @@
-# ZhiMrBond
+# [https://github.com/Yonsm/ZhiMrBond](https://github.com/Yonsm/ZhiMrBond)
 
 MrBond Airer Component for HomeAssistant
 
@@ -12,7 +12,7 @@ _依赖 [python-miio](https://github.com/rytilahti/python-miio)，运行时自�
 
 ## 2. 配置方法
 
-参见[我的 Home Assistant 配置](https://github.com/Yonsm/.homeassistant)中 [configuration.yaml](https://github.com/Yonsm/.homeassistant/blob/main/configuration.yaml)
+参见 [我的 Home Assistant 配置](https://github.com/Yonsm/.homeassistant) 中 [configuration.yaml](https://github.com/Yonsm/.homeassistant/blob/main/configuration.yaml)
 
 ```
 zhimrbond:
