@@ -14,7 +14,7 @@ _依赖 [python-miio](https://github.com/rytilahti/python-miio)，运行时自�
 
 参见 [我的 Home Assistant 配置](https://github.com/Yonsm/.homeassistant) 中 [configuration.yaml](https://github.com/Yonsm/.homeassistant/blob/main/configuration.yaml)
 
-```
+```yaml
 zhimrbond:
   name: 晾衣架
   host: Airer
@@ -23,9 +23,9 @@ zhimrbond:
 
 以上配置会自动生成两个设备 `light.liang_yi_jia` 和 `cover.liang_yi_jia`。其中：
 
--   `必选` `name` 可以自定义的设备名称
--   `必选` `host` 可以是主机名或 IP 地址
--   `必选` `token` 是 miio 设备的 token
+- `必选` `name` 可以自定义的设备名称
+- `必选` `host` 可以是主机名或 IP 地址
+- `必选` `token` 是 miio 设备的 token
 
 _如何获取 `token`？_ 参见 [MiService](https://github.com/Yonsm/MiService)
 
@@ -73,7 +73,7 @@ micli.py spec mrbond
 
 ## 4. 参考
 
--   [ZhiDash](https://github.com/Yonsm/ZhiDash)
--   [Yonsm.NET](https://yonsm.github.io)
--   [Hassbian.com](https://bbs.hassbian.com/thread-12336-1-1.html)
--   [Yonsm's .homeassistant](https://github.com/Yonsm/.homeassistant)
+- [ZhiDash](https://github.com/Yonsm/ZhiDash)
+- [Yonsm.NET](https://yonsm.github.io)
+- [Hassbian.com](https://bbs.hassbian.com/thread-12336-1-1.html)
+- [Yonsm's .homeassistant](https://github.com/Yonsm/.homeassistant)
