@@ -1,26 +1,26 @@
-"""Support for MrBond Airer's Light."""
-from . import MiioEntity, DOMAIN
-from homeassistant.components.light import LightEntity
+
+from ..zhimi.entity import ZhiMIoTEntity, ZHI_MIOT_SCHEMA
+from .mrbond_airer_m1pro import *
+from homeassistant.components.light import LightEntity, PLATFORM_SCHEMA
+
+PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(ZHI_MIOT_SCHEMA)
+
 
 async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
-    """Set up the light from config."""
-    async_add_entities([MrBondLight(hass, discovery_info + '灯', hass.data[DOMAIN])])
+    async_add_entities([ZhiMrBondLight(config)], True)
 
 
-class MrBondLight(MiioEntity, LightEntity):
-    """Representation of MrBond Airer Light."""
+class ZhiMrBondLight(ZhiMIoTEntity, LightEntity):
+
+    def __init__(self, conf):
+        super().__init__({SRV_Light:[PROP_Switch_Status]}, conf)
 
     @property
     def is_on(self):
-        """Return true if light is on."""
-        return self._device.status.get('led') == '1'
+        return self.data[SRV_Light][PROP_Switch_Status]
 
-    def turn_on(self, **kwargs):
-        """Turn the light on."""
-        if self._device.control('set_led', 1):
-            self._device.status['led'] = '1'
+    async def async_turn_on(self, **kwargs):
+        await self.async_control(SRV_Light, PROP_Switch_Status, True)
 
-    def turn_off(self, **kwargs):
-        """Turn the light off."""
-        if self._device.control('set_led', 0):
-            self._device.status['led'] = '0'
+    async def async_turn_off(self, **kwargs):
+        await self.async_control(SRV_Light, PROP_Switch_Status, False)

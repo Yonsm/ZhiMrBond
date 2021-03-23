@@ -3,7 +3,7 @@
 	"name": "Zhi MrBond Airer",
 	"documentation": "https://github.com/Yonsm/ZhiMrBond",
 	"version": "1.0.1",
-	"requirements": ["python-miio>=0.5.3"],
-	"dependencies": [],
+	"requirements": [],
+	"dependencies": ["zhimi"],
 	"codeowners": ["@Yonsm"]
 }
