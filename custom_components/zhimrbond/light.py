@@ -13,11 +13,11 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
 class ZhiMrBondLight(ZhiMIoTEntity, LightEntity):
 
     def __init__(self, conf):
-        super().__init__({SRV_Light:[PROP_Switch_Status]}, conf)
+        super().__init__({SRV_Light: [PROP_Switch_Status]}, conf)
 
     @property
     def is_on(self):
-        return self.data[SRV_Light][PROP_Switch_Status]
+        return self.data[PROP_Switch_Status]
 
     async def async_turn_on(self, **kwargs):
         await self.async_control(SRV_Light, PROP_Switch_Status, True)

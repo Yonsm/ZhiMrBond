@@ -21,6 +21,6 @@ class ZhiMrBondAirer(ZhiEntity, ZhiTravelCover):
         ZhiTravelCover.__init__(self, AIRER_TRAVEL_TIME)
         self.did = conf[CONF_DID]
 
-    async def async_control_cover(self, op):
+    async def control_cover(self, op):
         values = [VALUE_Motor_Control.Up, VALUE_Motor_Control.Down, VALUE_Motor_Control.Pause]
         return await miio_service.miot_control(self.did, SRV_Airer, PROP_Motor_Control, values[op]) == 0
