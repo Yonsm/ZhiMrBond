@@ -8,7 +8,7 @@ MrBond Airer Component for HomeAssistant
 
 把 `zhimrbond` 放入 `custom_components`；也支持在 [HACS](https://hacs.xyz/) 中添加自定义库的方式安装。
 
-_依赖 [python-miio](https://github.com/rytilahti/python-miio)，运行时自动检查安装。_
+_依赖 [Zhi](https://github.com/Yonsm/Zhi) 和 [ZhiMi](https://github.com/Yonsm/ZhiMi)，请一并安装。_
 
 ## 2. 配置方法
 
