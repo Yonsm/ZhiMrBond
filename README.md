@@ -15,19 +15,20 @@ _依赖 [Zhi](https://github.com/Yonsm/Zhi) 和 [ZhiMi](https://github.com/Yonsm
 参见 [我的 Home Assistant 配置](https://github.com/Yonsm/.homeassistant) 中 [configuration.yaml](https://github.com/Yonsm/.homeassistant/blob/main/configuration.yaml)
 
 ```yaml
-zhimrbond:
-  name: 晾衣架
-  host: Airer
-  token: !secret airer_token
+light:
+  - platform: zhimrbond
+    name: 晾衣灯
+    did: 57379167
+cover:
+  - platform: zhimrbond
+    name: 晾衣架
+    did: 57379167
 ```
 
-以上配置会自动生成两个设备 `light.liang_yi_jia` 和 `cover.liang_yi_jia`。其中：
-
 - `必选` `name` 可以自定义的设备名称
-- `必选` `host` 可以是主机名或 IP 地址
-- `必选` `token` 是 miio 设备的 token
+- `必选` `did` 可以是主机名或 IP 地址
 
-_如何获取 `token`？_ 参见 [MiService](https://github.com/Yonsm/MiService)
+_如何获取 `did`？_ 参见 [MiService](https://github.com/Yonsm/MiService)
 
 ## 2. 已知问题
 
